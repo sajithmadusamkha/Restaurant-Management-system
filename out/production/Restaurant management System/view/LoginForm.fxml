@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginContext" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane layoutX="332.0" prefHeight="500.0" prefWidth="368.0" style="-fx-background-color: #F9CF93;">
+         <children>
+            <TextField fx:id="txtUserName" layoutX="52.0" layoutY="238.0" prefHeight="32.0" prefWidth="264.0" promptText="User Name" />
+            <PasswordField fx:id="txtPwd" layoutX="52.0" layoutY="298.0" prefHeight="32.0" prefWidth="264.0" promptText="Password" />
+            <Label layoutX="53.0" layoutY="221.0" text="User Name" />
+            <Label layoutX="53.0" layoutY="281.0" text="Password" />
+            <JFXCheckBox checkedColor="#c36a2d" layoutX="52.0" layoutY="339.0" prefHeight="18.0" prefWidth="124.0" text="Keep me logged in">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton buttonType="RAISED" layoutX="52.0" layoutY="374.0" onAction="#loginOnAction" prefHeight="32.0" prefWidth="264.0" style="-fx-background-color: #C36A2D;" text="Log in" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="105.0" layoutY="436.0" text="Don't have an account?">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Separator layoutX="52.0" layoutY="423.0" prefHeight="3.0" prefWidth="264.0" />
+            <Label layoutX="222.0" layoutY="435.0" onMouseClicked="#signupOnMouseClicked" text="Sign up" textFill="#ff2929" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="111.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/Logo.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="loginMessageLbl" alignment="CENTER" layoutX="52.0" layoutY="199.0" prefHeight="17.0" prefWidth="264.0" textFill="#ff1a1a">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ImageView fitHeight="500.0" fitWidth="332.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assets/pexels-alleksana-4224305.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="811.0" style="-fx-background-color: #FBFBFB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TableFormController">
+   <children>
+      <Label layoutX="22.0" layoutY="20.0" text="Table" textFill="#4a4a4a">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="50.0" prefHeight="2.0" prefWidth="774.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbd0c0" height="429.0" layoutX="24.0" layoutY="114.0" stroke="TRANSPARENT" strokeType="INSIDE" width="200.0" />
+      <JFXTextField fx:id="txtTblId" focusColor="#e2c275" labelFloat="true" layoutX="49.0" layoutY="170.0" onAction="#txtSearchOnAction" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="151.0" promptText="Table Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtTblName" focusColor="#e2c275" labelFloat="true" layoutX="49.0" layoutY="232.0" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="151.0" promptText="Table Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddTable" buttonType="RAISED" layoutX="49.0" layoutY="361.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #F9CF93;" text="Add Table" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdateTable" buttonType="RAISED" layoutX="49.0" layoutY="406.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #F9CF93;" text="Edit Table" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblView" layoutX="272.0" layoutY="114.0" prefHeight="429.0" prefWidth="516.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="88.0" text="Id" />
+          <TableColumn fx:id="colName" prefWidth="301.0" text="Table Name" />
+            <TableColumn fx:id="colStatus" prefWidth="126.0" text="Status" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtTblStatus" focusColor="#e2c275" labelFloat="true" layoutX="49.0" layoutY="291.0" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="151.0" promptText="Status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="49.0" layoutY="456.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="151.0" style="-fx-background-color: #F9CF93;" text="Delete Table" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

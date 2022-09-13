@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashBoard" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../assets/Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane layoutY="24.0" prefHeight="576.0" prefWidth="210.0" style="-fx-background-color: #F9E4C8;">
+         <children>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="255.0" onAction="#orderFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Order" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/checkout.png" />
+                     </image></ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="301.0" onAction="#deliveryOrderFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Delivery Orders" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/food.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="439.0" onAction="#employeesFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Employees" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/employees.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="393.0" onAction="#customerDetailOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Customer Detail" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/shopping.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="163.0" onAction="#tableFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Tables" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/table.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="347.0" onAction="#deliveryBoyOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Delivery Boys" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/motorbike.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="117.0" onAction="#itemFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Food's" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/dish.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="71.0" onAction="#homeFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Home" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/home.png" />
+                     </image></ImageView>
+               </graphic>
+            </JFXButton>
+            <Label layoutX="14.0" layoutY="543.0" onMouseClicked="#logoutOnAction" text="Log Out" textFill="#fc4141" underline="true">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="BASELINE_LEFT" buttonType="RAISED" layoutY="209.0" onAction="#DineInOrderFormOnAction" prefHeight="46.0" prefWidth="210.0" styleClass="sideBarItem" text="Dine-In Order" textFill="#656565">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/dine-in.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="context" layoutX="210.0" layoutY="24.0" prefHeight="576.0" prefWidth="811.0" style="-fx-background-color: #FBFBFB;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c36a2d" height="36.0" layoutX="-7.0" layoutY="-10.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1028.0" />
+      <Label layoutX="804.0" layoutY="5.0" text="Date:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="845.0" layoutY="6.0" text="2022/03/15" textFill="WHITE" />
+      <Label layoutX="927.0" layoutY="5.0" text="Time:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="969.0" layoutY="6.0" text="5:12:00" textFill="WHITE" />
+      <Label layoutX="14.0" layoutY="5.0" text="Hops &amp; Chops Restauarant" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,95 @@
+DROP DATABASE IF EXISTS Restaurant;
+CREATE DATABASE IF NOT EXISTS Restaurant;
+
+USE Restaurant;
+
+CREATE TABLE Login(
+      id VARCHAR(6) NOT NULL,
+      userName VARCHAR(6) NOT NULL,
+      password VARCHAR(36) NOT NULL,
+      CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE User(
+      id VARCHAR(6) NOT NULL,
+      loginId VARCHAR(6) NOT NULL,
+      name VARCHAR(36),
+      teleNo VARCHAR(20),
+      CONSTRAINT PRIMARY KEY(id),
+      CONSTRAINT FOREIGN KEY(loginId) REFERENCES Login(id) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE Roles(
+     id VARCHAR(6) NOT NULL,
+     role VARCHAR(26) NOT NULL,
+     description VARCHAR(50),
+     CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE Employee(
+   id VARCHAR(6) NOT NULL,
+   name VARCHAR(36) NOT NULL,
+   adrress VARCHAR(50),
+   salary VARCHAR(50),
+   CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE bookTable(
+   id VARCHAR(6) NOT NULL,
+   talbeName VARCHAR(26) NOT NULL,
+   status VARCHAR(20),
+   CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE Customer(
+      id VARCHAR(6) NOT NULL,
+      name VARCHAR(36),
+      adrress VARCHAR(36),
+      teleNo VARCHAR(15),
+      CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE Orders(
+     id VARCHAR(6) NOT NULL,
+     customerId VARCHAR(6) NOT NULL,
+     employeeId VARCHAR(6) NOT NULL,
+     tableId VARCHAR(6) NOT NULL,
+     CONSTRAINT PRIMARY KEY(id),
+     CONSTRAINT FOREIGN KEY(customerId) REFERENCES Customer(id) on Delete Cascade on Update Cascade,
+     CONSTRAINT FOREIGN KEY(employeeId) REFERENCES Employee(id) on Delete Cascade on Update Cascade,
+     CONSTRAINT FOREIGN KEY(tableId) REFERENCES bookTable(id) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE Food(
+     code VARCHAR(6) NOT NULL,
+     foodName VARCHAR(50),
+     price DECIMAL(8,2),
+     qtyOnHand INT(5),
+     CONSTRAINT PRIMARY KEY (code)
+);
+
+CREATE TABLE OrderDetail(
+    orderId VARCHAR(6) NOT NULL,
+    foodCode VARCHAR(6) NOT NULL,
+    date Date,
+    qty INT(11),
+    price DECIMAL(8,2),
+    CONSTRAINT PRIMARY KEY (orderId,foodCode),
+    CONSTRAINT FOREIGN KEY (orderId) REFERENCES Orders(id) on Delete Cascade on Update Cascade,
+    CONSTRAINT FOREIGN KEY (foodCode) REFERENCES Food(code) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE DeliveryBoy(
+    id VARCHAR(6) NOT NULL,
+    name VARCHAR(36) NOT NULL,
+    vehicleNo VARCHAR(10),
+    CONSTRAINT PRIMARY KEY(id)
+);
+
+CREATE TABLE DeliveryOrder(
+   id VARCHAR(6) NOT NULL,
+   deliveryBoyId VARCHAR(6) NOT NULL,
+   location VARCHAR(36),
+   CONSTRAINT PRIMARY KEY(id),
+   CONSTRAINT FOREIGN KEY (deliveryBoyId) REFERENCES DeliveryBoy(id) on Delete Cascade on Update Cascade
+);

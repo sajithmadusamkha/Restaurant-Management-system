@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeliveryBoyFormController">
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" text="Delivery Boy" textFill="#4a4a4a">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="47.0" prefHeight="3.0" prefWidth="784.0" />
+      <TableView fx:id="tblDeliveryBoy" layoutX="218.0" layoutY="112.0" prefHeight="399.0" prefWidth="580.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="147.0" text="Delivery_Boy Id" />
+            <TableColumn fx:id="colName" prefWidth="225.0" text="Boy Name" />
+            <TableColumn fx:id="colVehicleNo" prefWidth="207.0" text="Vehicle No." />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dbd0c0" height="399.0" layoutX="19.0" layoutY="112.0" stroke="TRANSPARENT" strokeType="INSIDE" width="178.0" />
+      <JFXTextField fx:id="txtBoyName" focusColor="#e2c275" labelFloat="true" layoutX="41.0" layoutY="247.0" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="131.0" promptText="Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtVehicleNo" focusColor="#e2c275" labelFloat="true" layoutX="41.0" layoutY="320.0" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="131.0" promptText="Vehicle No.">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton fx:id="btnAddBoy" buttonType="RAISED" layoutX="41.0" layoutY="368.0" onAction="#saveBoyOnAction" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #F9CF93;" text="Add Boy" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnEditBoy" buttonType="RAISED" layoutX="41.0" layoutY="414.0" onAction="#updateOnAction" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #F9CF93;" text="Edit Boy" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtBoyId" focusColor="#e2c275" labelFloat="true" layoutX="41.0" layoutY="178.0" onAction="#txtSearchOnAction" onKeyReleased="#txtFields_Key_released" prefHeight="25.0" prefWidth="131.0" promptText="Delivey_Boy Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="41.0" layoutY="459.0" onAction="#deleteOnAction" prefHeight="31.0" prefWidth="131.0" style="-fx-background-color: #F9CF93;" text="Delete" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

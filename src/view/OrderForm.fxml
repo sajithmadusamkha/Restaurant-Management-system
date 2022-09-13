@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="576.0" prefWidth="811.0" style="-fx-background-color: #FBFBFB;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+   <children>
+      <Label layoutX="21.0" layoutY="14.0" text="Order" textFill="#4a4a4a">
+         <font>
+            <Font name="Arial Bold" size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="14.0" layoutY="45.0" prefHeight="3.0" prefWidth="784.0" />
+      <JFXComboBox fx:id="cmbCustomerId" focusColor="#e2c275" layoutX="14.0" layoutY="78.0" prefHeight="25.0" prefWidth="135.0" promptText="Customer" />
+      <JFXTextField fx:id="txtName" focusColor="#e2c275" labelFloat="true" layoutX="164.0" layoutY="78.0" prefHeight="25.0" prefWidth="135.0" promptText="Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXComboBox fx:id="cmbFoodCode" focusColor="#e2c275" layoutX="14.0" layoutY="134.0" prefHeight="25.0" prefWidth="135.0" promptText="Food" />
+      <JFXTextField fx:id="txtFoodName" focusColor="#e2c275" labelFloat="true" layoutX="164.0" layoutY="134.0" prefHeight="25.0" prefWidth="161.0" promptText="Food Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtStock" focusColor="#e2c275" labelFloat="true" layoutX="340.0" layoutY="134.0" prefHeight="25.0" prefWidth="106.0" promptText="Stock">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPrice" focusColor="#e2c275" labelFloat="true" layoutX="463.0" layoutY="134.0" prefHeight="25.0" prefWidth="106.0" promptText="Price">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <Separator layoutX="580.0" layoutY="138.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="5.0" />
+      <JFXTextField fx:id="txtQty" focusColor="#e2c275" labelFloat="true" layoutX="597.0" layoutY="134.0" prefHeight="25.0" prefWidth="90.0" promptText="Quantity">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="708.0" layoutY="132.0" onAction="#addToCartOnAction" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #F9CF93;" text="Add to Cart" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCart" layoutX="14.0" layoutY="188.0" prefHeight="299.0" prefWidth="784.0">
+        <columns>
+          <TableColumn fx:id="colCode" prefWidth="79.0" text="Food Code" />
+          <TableColumn fx:id="colFoodName" prefWidth="156.0" text="Food Name" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="119.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="77.0" text="Quantity" />
+            <TableColumn fx:id="colTotalCost" prefWidth="135.0" text="Total Cost" />
+            <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="colBtn" prefWidth="96.0" text="...." />
+        </columns>
+      </TableView>
+      <Label layoutX="14.0" layoutY="511.0" text="Total">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="53.0" layoutY="510.0" prefHeight="21.0" prefWidth="80.0" text="0" textFill="#ff2020">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="708.0" layoutY="506.0" onAction="#placeOrderOnAction" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #F9CF93;" text="Place Order" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="597.0" layoutY="506.0" onAction="#printInvoiceOnAction" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #F9CF93;" text="Print Recipt" textFill="#4a4a4a">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtTblId" focusColor="#e2c275" labelFloat="true" layoutX="333.0" layoutY="78.0" prefHeight="25.0" prefWidth="113.0" promptText="Table Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtEmployeeId" focusColor="#e2c275" labelFloat="true" layoutX="463.0" layoutY="78.0" prefHeight="25.0" prefWidth="113.0" promptText="Employee Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></JFXTextField>
+      <Separator layoutX="311.0" layoutY="81.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="5.0" />
+      <Label fx:id="lblDate" layoutX="725.0" layoutY="20.0" text="2022-03-24" textFill="#ff2020">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="690.0" layoutY="20.0" text="Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtOrderId" editable="false" focusColor="#e2c275" labelFloat="true" layoutX="593.0" layoutY="78.0" prefHeight="25.0" prefWidth="113.0" promptText="Order Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
